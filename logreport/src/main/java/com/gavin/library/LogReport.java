@@ -150,6 +150,7 @@ public class LogReport {
             return;
         }
         Intent intent = new Intent(applicationContext, UploadService.class);
+        //Android O 以上版本 启动适配
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             applicationContext.startForegroundService(intent);
         }else {
