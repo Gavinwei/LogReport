@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LogReport.iml" filepath="$PROJECT_DIR$/LogReport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LogReport-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LogReport-app.iml" group="LogReport/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logreport/LogReport-logreport.iml" filepath="$PROJECT_DIR$/.idea/modules/logreport/LogReport-logreport.iml" group="LogReport/logreport" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Study-LogReport.iml" filepath="$PROJECT_DIR$/.idea/modules/Study-LogReport.iml" group="LogReport" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/logreport/logreport.iml" filepath="$PROJECT_DIR$/logreport/logreport.iml" />
     </modules>
