@@ -1,7 +1,12 @@
 package com.gavin.library.upload;
 
 import android.app.IntentService;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
+
+import androidx.core.app.NotificationCompat;
 
 import com.gavin.library.LogReport;
 import com.gavin.library.util.CompressUtil;
@@ -15,7 +20,9 @@ import java.util.Locale;
 
 /**
  * 此Service用于后台发送日志
- *  2016/7/9.
+ * 2016/7/9.
+ *
+ * @author weizhengyao
  */
 public class UploadService extends IntentService {
 
@@ -37,6 +44,16 @@ public class UploadService extends IntentService {
     @Override
     public void onCreate() {
         super.onCreate();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            //数字是随便写的“40”，
+            nm.createNotificationChannel(new NotificationChannel("40", "App Service", NotificationManager.IMPORTANCE_DEFAULT));
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "40");
+
+            //其中的2，是也随便写的，正式项目也是随便写
+            startForeground(2, builder.build());
+        }
+
     }
 
     /**
